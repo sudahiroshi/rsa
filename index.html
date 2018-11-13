@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset='utf-8'>
+<title>RSA暗号を体験する</title>
+<script src="./rsa.js"></script>
+</head>
+<body>
+素数p<input type="text" id="p" size=4><br>
+素数q<input type="text" id="q" size=4><br>
+pとqの積N<span id="n"></span><br>
+p-1とq-1の最小公倍数F<span id="lcm"></span><br>
+<hr>
+公開鍵Eの候補（Eは、Fとの最大公約数が1となる数値)<br>
+<span id="e_candidate"></span><br>
+公開鍵E<input type="text" id="e" size=4><br>
+<hr>
+秘密鍵Dの候補（Dは、(D*E) mod F = 1となる数値)<br>
+<span id="d_candidate"></span>
+秘密鍵D<input type="text" id="d" size=4><br>
+<hr>
+平文<input type="text" id="plain" size=40><br>
+平文のバイト列<span id="each_byte"></span><br>
+<hr>
+暗号文(平文^E mod N）<br>
+<span id="encripted"></span><br>
+<hr>
+暗号文を復号(暗号文^D mod N）<br>
+<span id="decrypted"></span><br>
+</body>
+</html>
+
